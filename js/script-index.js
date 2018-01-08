@@ -7,7 +7,7 @@ $(document).ready( function(){
 	//La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
 	renderHighlightedRecipes(recipesArray);
 	printNews();
-
+  renderActivities(activities);
 });
 /*PARTE 2*/
 /* Creando función para agregar texto al elemento p*/
@@ -16,6 +16,7 @@ function printNews() {
 
 	$("#prueba").append("Nuevas recetas");
 }
+
 
 /*PARTE 3*/
 /*recorriendo data por medio del for y el if y completar la función ​ renderHighlightedRecipes*/
@@ -66,8 +67,11 @@ var image = recipe.name;
 }
 
 /*PARTE 5*/
-/*
-* Función que se encarga de pintar todas las actividades
+/*función que recorre un arreglo en el cual si tiene 
+mas de 0 objetos dentro de la carpeta activities.js 
+se ocultará un div de html*/
+
+/* Función que se encarga de pintar todas las actividades
 */
 
 function renderActivities(activities) {
@@ -79,6 +83,7 @@ function renderActivities(activities) {
       }
 	console.log('Activities: ', activities);
 }
+
 
 
 
