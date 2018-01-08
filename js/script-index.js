@@ -67,7 +67,7 @@ var image = recipe.name;
 }
 
 /*PARTE 5*/
-/*función que recorre un arreglo en el cual si tiene 
+/*Función que recorre un arreglo en el cual si tiene 
 mas de 0 objetos dentro de la carpeta activities.js 
 se ocultará un div de html*/
 
