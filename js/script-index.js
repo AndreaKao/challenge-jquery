@@ -36,7 +36,8 @@ function renderHighlightedRecipes(recipesArray) {
 }
 
 /*PARTE4*/
-/**/
+/*Agregando lista de imágenes y su descripción 
+desde otro archivo de HTML con append desde jquery*/
 
 /*
 * Función que se encarga de pintar UNA recetas que tenga 
@@ -46,34 +47,40 @@ function renderHighlightedRecipes(recipesArray) {
 */
 
 function renderRecipe(recipe) {
-  /*$('.list-recipes').append('<a class="item-recipe" href="#">' +
-  '<span class="attribution">' +
-    '<span class="title-recipe"> TITULO DE LA RECETA (ATRIBUTO "title" )' + '</span>' +
-    '<span class="metadata-recipe">' +
-      '<span class="author-recipe"> NOMBRE DEL AUTO DE LA RECETA (ATRIBUTO "source.name")' + '</span>' +
-      '<span class="bookmarks-recipe">' +
-        '<span class="icon-bookmark"></span>' +
-      '</span>' +
-    '</span>' +
-  '</span>' +
-  '<img src="URL DE LA IMAGEN" />' +
-  '</a>')*/
-
   $('.list-recipes').append('<a class="item-recipe" href="#">' + 
   	'<span class="attribution">' +
-    '<span class="title-recipe"> TITULO DE LA RECETA (ATRIBUTO "title")</span>' +
+    '<span class="title-recipe">' + recipe.title + ' </span>' +
     '<span class="metadata-recipe">' +
-      '<span class="author-recipe"> NOMBRE DEL AUTO DE LA RECETA (ATRIBUTO "source.name")</span>' +
-      '<span class="bookmarks-recipe">' + 
-      '<span class="icon-bookmark"></span>' + 
-      '</span>' +
+    '<span class="author-recipe">' + recipe.source.name + ' </span>' +
+    '<span class="bookmarks-recipe">' + 
+    '<span class="icon-bookmark">' +
+    '</span>' + 
     '</span>' +
+    '</span>' +
+    '</span>' +
+    '<img src="img/recipes/640x480/'+ recipe.name +'.jpg"/>' + '</a>');
+  console.log('Voy a pintar la receta: ', recipe);
+}
+
+/*
+function renderRecipe(recipe) {
+  $('.list-recipes').append('<a class="item-recipe" href="#">' +
+  '<span class="attribution">' +
+    '<span class="title-recipe">' + recipe.title + '</span>' +
+    '<span class="metadata-recipe">' +
+      '<span class="author-recipe">' + recipe.source.name + '</span>' +
+        '<span class="bookmarks-recipe">' +
+          '<span class="icon-bookmark">' +
+          '</span>' +
+        '</span>' +
+      '</span>' +
   '</span>' +
-  '<img src="URL DE LA IMAGEN" />' +
-	'</a>')
+  '<img src="img/recipes/320x350/' + recipe.name + '.jpg"/>' +
+  '</a>');
 
   console.log('Voy a pintar la receta: ', recipe);
 }
+*/
 
 
 
