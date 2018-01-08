@@ -1,4 +1,4 @@
-/*PARTE1*/
+/*PARTE 1*/
 $(document).ready( function(){
 
 	/* Ocultando icono flecha */
@@ -9,7 +9,7 @@ $(document).ready( function(){
 	printNews();
 
 });
-/*PARTE2*/
+/*PARTE 2*/
 /* Creando función para agregar texto al elemento p*/
 
 function printNews() {
@@ -17,7 +17,7 @@ function printNews() {
 	$("#prueba").append("Nuevas recetas");
 }
 
-/*PARTE3*/
+/*PARTE 3*/
 /*recorriendo data por medio del for y el if y completar la función ​ renderHighlightedRecipes*/
 
 /*
@@ -35,7 +35,7 @@ function renderHighlightedRecipes(recipesArray) {
 	console.log('Recipes: ', recipesArray);
 }
 
-/*PARTE4*/
+/*PARTE 4*/
 /*Agregando lista de imágenes y su descripción 
 desde otro archivo de HTML con append desde jquery*/
 
@@ -47,6 +47,9 @@ desde otro archivo de HTML con append desde jquery*/
 */
 
 function renderRecipe(recipe) {
+var title = recipe.title;
+var name = recipe.source.name;
+var image = recipe.name;
   $('.list-recipes').append('<a class="item-recipe" href="#">' + 
   	'<span class="attribution">' +
     '<span class="title-recipe">' + recipe.title + ' </span>' +
@@ -62,35 +65,23 @@ function renderRecipe(recipe) {
   console.log('Voy a pintar la receta: ', recipe);
 }
 
-/*
-function renderRecipe(recipe) {
-  $('.list-recipes').append('<a class="item-recipe" href="#">' +
-  '<span class="attribution">' +
-    '<span class="title-recipe">' + recipe.title + '</span>' +
-    '<span class="metadata-recipe">' +
-      '<span class="author-recipe">' + recipe.source.name + '</span>' +
-        '<span class="bookmarks-recipe">' +
-          '<span class="icon-bookmark">' +
-          '</span>' +
-        '</span>' +
-      '</span>' +
-  '</span>' +
-  '<img src="img/recipes/320x350/' + recipe.name + '.jpg"/>' +
-  '</a>');
-
-  console.log('Voy a pintar la receta: ', recipe);
-}
-*/
-
-
-
-
+/*PARTE 5*/
 /*
 * Función que se encarga de pintar todas las actividades
 */
-function renderActivities(activitiesArray) {
-	console.log('Activities: ', activitiesArray);
+
+function renderActivities(activities) {
+  for(var i = 0; i < activities.length; i++) {
+     renderActivity(activities[i]);
+   }
+    if (activities.length > 0) {
+      $('.wrapper-message').hide();
+      }
+	console.log('Activities: ', activities);
 }
+
+
+
 
 /*
 * Función que se encarga de pintar una actividad
@@ -98,7 +89,7 @@ function renderActivities(activitiesArray) {
 * archivo "templates/templates-activity.html"
 */
 function renderActivity(recipe) {
+
 	
 }
-
 
