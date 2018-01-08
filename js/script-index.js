@@ -1,11 +1,20 @@
 $(document).ready( function(){
+	/* Ocultando icono flecha */
 	$(".js-back").hide();
-
 
 	//La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
 	renderHighlightedRecipes(recipesArray);
 
 });
+
+/* Creando función para agregar texto al elemento p*/
+
+printNews()
+
+function printNews() {
+	$(".callout-news p").append("Nuevas recetas");
+}
+
 
 
 /*
