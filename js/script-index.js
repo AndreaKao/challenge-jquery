@@ -86,8 +86,9 @@ function renderActivities(activities) {
 
 /*PARTE 6*/
 /* Agregando variables en la function 
-que nos permite a la vez agregar el archivo templates 
-dentro de jquery para visualizar los elementos*/
+que nos permite a la vez agregar crear con jquery 
+el html que está dentro del archivo templates 
+permitiendo para visualizar los elementos*/
 /*
 * Función que se encarga de pintar una actividad
 * Aqui se tiene que crear el HTML que esta en el 
