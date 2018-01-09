@@ -84,17 +84,39 @@ function renderActivities(activities) {
 	console.log('Activities: ', activities);
 }
 
-
-
-
-
+/*PARTE 6*/
+/* Agregando variables en la function 
+que nos permite a la vez agregar el archivo templates 
+dentro de jquery para visualizar los elementos*/
 /*
 * Función que se encarga de pintar una actividad
 * Aqui se tiene que crear el HTML que esta en el 
 * archivo "templates/templates-activity.html"
 */
 function renderActivity(recipe) {
+var avatar = recipe.userAvatar;
+var name = recipe.userName;
+var title = recipe.recipename;
+var receta = recipe.text;
 
-	
+  $('.list-activities').append('<a href="#" class="item-activity">' +
+    '<span class="attribution">' +
+    '<span class="avatar">' +
+    '<img src=' + 
+    'class="image-avatar">' +
+    '</span>' + 
+    '<span class="meta">' +
+    '<span class="author">' + recipe.userName + 
+    '</span>' + 'made' +
+    '<span class="recipe">' + recipe.recipeName + 
+    '</span>' + ':' + recipe.text + 
+    '<span class="location">' + '&mdash;' + recipe.place + 
+    '</span>' + 
+    '</span>' +
+    '</span>' +
+    '<div class="bg-image" style="background-image: url(' + recipe.image + ')">' +'</div>' +
+    '</a>');
 }
+
+
 
